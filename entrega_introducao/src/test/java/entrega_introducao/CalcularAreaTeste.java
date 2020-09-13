@@ -9,20 +9,22 @@ import static org.junit.Assert.*;
 public class CalcularAreaTeste {
     @Test //calcula a area quadrada
     public void calculoQuadrado() throws Exception {
+        CalcularArea calculo = new CalcularArea();
         int base = 30;
         int altura = 10;
-        int area = 0;
+        int calculoQuadrado = calculo.calculoQuadrado(base, altura);
 
-        assertEquals(300, area);
+        assertEquals(300, calculoQuadrado);
     }
     
     @Test //calcula a area cubica
-    public void CalculoCubico() throws Exception{
+    public void calculoCubico() throws Exception{
+        CalcularArea calculo = new CalcularArea();
         int lado1 = 20;
         int lado2 = 10;
         int lado3 = 5;
-        int areacubica = 0;
+        int calculoCubico = calculo.calculoCubico(lado1, lado2, lado3);
 
-        assertEquals(1000, areacubica);
+        assertEquals(1000, calculoCubico);
     }
  }
