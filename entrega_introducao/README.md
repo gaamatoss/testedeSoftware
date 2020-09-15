@@ -4,7 +4,7 @@ Repositório criado para a disciplina de Teste de Software
 ### Gabriel Matos Marques Silva
 #### RA: 1460481721027
 
-### Entrega Introdução (Video Explicativos dos Testes)[https://www.youtube.com/watch?v=gAqPSGpchAc&feature=youtu.be]
+### Entrega Introdução [Video Explicativos dos Testes](https://www.youtube.com/watch?v=gAqPSGpchAc&feature=youtu.be)
 Para o primeira projeto estudamos sobre TDD(Test Driven Development) onde existem 3 etapas:
 
 - [TDD-RED](https://github.com/gaamatoss/testedeSoftware/tree/TDD-Red)
