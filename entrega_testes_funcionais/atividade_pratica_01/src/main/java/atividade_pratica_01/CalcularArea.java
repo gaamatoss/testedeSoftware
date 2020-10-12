@@ -5,7 +5,7 @@ import org.apache.commons.math3.*;
 
 public class CalcularArea {
     public int calculoQuadrado(int base, int altura){
-        if (base < 0 || base > 99 & altura < 0 || altura > 99){
+        if (base < 1 || base > 99 & altura < 1 || altura > 99){
             return 0;
         }
         else {
@@ -13,7 +13,7 @@ public class CalcularArea {
         }
     }
     public int calculoCubico(int lado1, int lado2, int lado3){
-        if (lado1 < 0 || lado1 > 99 & lado2 < 0 || lado2 > 99 & lado3 < 0 || lado3 > 99){
+        if (lado1 < 1 || lado1 > 99 & lado2 < 1 || lado2 > 99 & lado3 < 1 || lado3 > 99){
             return 0;
         }
         else {
@@ -36,41 +36,54 @@ public class CalcularArea {
         System.out.println("Operação: ");
 
         opc = input.nextInt();  
-        if (opc == 1) {
-            Scanner input1 = new Scanner(System.in);    
-			
-			System.out.println("Qual o valor da Base: ");  
-			base = input1.nextInt();  
-			System.out.println("Qual o valor da Altura: ");  
-            altura = input1.nextInt();
-            if(base == 0 || altura == 0){
-                System.out.println("Nenhum valor pode ser igual a 0, Refaça a operação.");  
-            }
-            else{
-                int operacao = calc.calculoQuadrado(base, altura);
-                System.out.printf("Area de %d unidade de medida\n", operacao);
-            }
+        while (opc == 0 || opc > 3){
+            System.out.println("Selecione operacoes disponiveis.");
+            opc = input.nextInt();
         }
-
-        else if(opc ==  2){
-            Scanner input1 = new Scanner(System.in);    
-			
-			System.out.println("Qual o valor do Lado 1: ");  
-			lado1 = input1.nextInt();  
-			System.out.println("Qual o valor da Lado 2: ");  
-            lado2 = input1.nextInt();
-            System.out.println("Qual o valor do Lado 3: ");  
-            lado3 = input1.nextInt();
-            if(lado1 == 0 || lado2 == 0 || lado3 == 0){
-                System.out.println("Nenhum valor pode ser igual a 0, Refaça a operação.");  
-            }
-            else{
-            int operacao = calc.calculoCubico(lado1, lado2, lado3);
-            System.out.printf("Area de %d unidade de medida\n", operacao);
-            }
-        }
-        else if(opc == 3){
-            System.out.printf("Ate logo!\n");
+        switch (opc){
+            case 1:
+                Scanner input1 = new Scanner(System.in);    
+                System.out.println("Qual o valor da Base: ");  
+                base = input1.nextInt();
+                while(base <= 0){
+                    System.out.println("Base nao pode ser 0. Qual o valor da Base: ");  
+                    base = input1.nextInt();
+                } 
+                System.out.println("Qual o valor da Altura: ");  
+                altura = input1.nextInt();
+                while(altura <= 0){
+                    System.out.println("Altura nao pode ser 0. Qual o valor da Altura: ");  
+                    altura = input1.nextInt();
+                }
+                    int operacao = calc.calculoQuadrado(base, altura);
+                    System.out.printf("Area de %d unidade de medida\n", operacao);
+                break;
+            case 2:
+                Scanner input2 = new Scanner(System.in);    
+                
+                    System.out.println("Qual o valor do Lado 1: ");
+                    lado1 = input2.nextInt();  
+                    while(lado1 <= 0){
+                        System.out.println("Lado 1 nao pode ser menor ou igual 0. Qual o valor do Lado 1: ");  
+                        altura = input2.nextInt();
+                    }
+                    System.out.println("Qual o valor da Lado 2: ");  
+                    lado2 = input2.nextInt();
+                    while(lado2 <= 0){
+                        System.out.println("Lado 2 nao pode ser menor ou igual 0. Qual o valor do Lado 2: ");  
+                        altura = input2.nextInt();
+                    }
+                    System.out.println("Qual o valor do Lado 3: ");  
+                    lado3 = input2.nextInt();
+                    while(lado3 <= 0){
+                        System.out.println("Lado 3 nao pode ser menor ou igual 0. Qual o valor d0 Lado 3: ");  
+                        altura = input2.nextInt();
+                    }
+                    
+                    break;    
+            case 3:
+                System.out.println("Ate Logo!");
+                break;
         }
     }
 }
