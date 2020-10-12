@@ -7,38 +7,42 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CalcularAreaTeste {
     @Test //calcula a area quadrada
     public void calculoQuadrado() throws Exception {
+        CalcularArea calculo = new CalcularArea();
         int base = 30;
         int altura = 10;
-        int calculo = 0;
+        int calculoQuadrado = calculo.calculoQuadrado(base, altura);
 
-        assertEquals(300, calculo);
+        assertEquals(300, calculoQuadrado);
     }
 
     @Test //calcula a area quadrada
     public void calculoQuadrado2() throws Exception {
-        int base = -30; // < 0
+        CalcularArea calculo = new CalcularArea();
+        int base = -30;
         int altura = 10;
-        int calculo = 0;
+        int calculoQuadrado = calculo.calculoQuadrado(base, altura);
 
-        assertEquals(300, calculo);
+        assertEquals(0, calculoQuadrado);
     }
 
     @Test //calcula a area quadrada
     public void calculoQuadrado3() throws Exception {
+        CalcularArea calculo = new CalcularArea();
         int base = 30;
-        int altura = 100; // > 99
-        int calculo = 0;
+        int altura = 100;
+        int calculoQuadrado = calculo.calculoQuadrado(base, altura);
 
-        assertEquals(300, calculo);
+        assertEquals(0, calculoQuadrado);
     }
     
     @Test //calcula a area cubica
     public void calculoCubico() throws Exception{
+        CalcularArea calculo = new CalcularArea();
         int lado1 = 20;
         int lado2 = 10;
         int lado3 = 5;
-        int calculo = 0;
+        int calculoCubico = calculo.calculoCubico(lado1, lado2, lado3);
 
-        assertEquals(1000, calculo);
+        assertEquals(1000, calculoCubico);
     }
  }
