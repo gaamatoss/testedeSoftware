@@ -45,14 +45,14 @@ public class CalcularArea {
                 Scanner input1 = new Scanner(System.in);    
                 System.out.println("Qual o valor da Base: ");  
                 base = input1.nextInt();
-                while(base <= 0){
-                    System.out.println("Base nao pode ser menor ou igual 0. Qual o valor da Base: ");  
+                while(base <= 0 || base > 99){
+                    System.out.println("Valor invalido, selecione valores entre 1 a 99. Qual o valor da Base: ");  
                     base = input1.nextInt();
                 } 
                 System.out.println("Qual o valor da Altura: ");  
                 altura = input1.nextInt();
-                while(altura <= 0){
-                    System.out.println("Altura nao pode ser menor ou igual 0. Qual o valor da Altura: ");  
+                while(altura <= 0 || altura > 99){
+                    System.out.println("Valor invalido, selecione valores entre 1 a 99. Qual o valor da Altura: ");  
                     altura = input1.nextInt();
                 }
                     int operacao = calc.calculoQuadrado(base, altura);
@@ -63,20 +63,20 @@ public class CalcularArea {
                 
                     System.out.println("Qual o valor do Lado 1: ");
                     lado1 = input2.nextInt();  
-                    while(lado1 <= 0){
-                        System.out.println("Lado 1 nao pode ser menor ou igual 0. Qual o valor do Lado 1: ");  
+                    while(lado1 <= 0 || lado1 > 99){
+                        System.out.println("Valor invalido, selecione valores entre 1 a 99. Qual o valor do Lado 1: ");  
                         altura = input2.nextInt();
                     }
                     System.out.println("Qual o valor da Lado 2: ");  
                     lado2 = input2.nextInt();
-                    while(lado2 <= 0){
-                        System.out.println("Lado 2 nao pode ser menor ou igual 0. Qual o valor do Lado 2: ");  
+                    while(lado2 <= 0 || lado2 > 99){
+                        System.out.println("Valor invalido, selecione valores entre 1 a 99. Qual o valor do Lado 2: ");  
                         altura = input2.nextInt();
                     }
                     System.out.println("Qual o valor do Lado 3: ");  
                     lado3 = input2.nextInt();
-                    while(lado3 <= 0){
-                        System.out.println("Lado 3 nao pode ser menor ou igual 0. Qual o valor d0 Lado 3: ");  
+                    while(lado3 <= 0 || lado3 > 99){
+                        System.out.println("Valor invalido, selecione valores entre 1 a 99. Qual o valor d0 Lado 3: ");  
                         altura = input2.nextInt();
                     }
                     
