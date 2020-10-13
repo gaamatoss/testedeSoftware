@@ -46,13 +46,13 @@ public class CalcularArea {
                 System.out.println("Qual o valor da Base: ");  
                 base = input1.nextInt();
                 while(base <= 0){
-                    System.out.println("Base nao pode ser 0. Qual o valor da Base: ");  
+                    System.out.println("Base nao pode ser menor ou igual 0. Qual o valor da Base: ");  
                     base = input1.nextInt();
                 } 
                 System.out.println("Qual o valor da Altura: ");  
                 altura = input1.nextInt();
                 while(altura <= 0){
-                    System.out.println("Altura nao pode ser 0. Qual o valor da Altura: ");  
+                    System.out.println("Altura nao pode ser menor ou igual 0. Qual o valor da Altura: ");  
                     altura = input1.nextInt();
                 }
                     int operacao = calc.calculoQuadrado(base, altura);
