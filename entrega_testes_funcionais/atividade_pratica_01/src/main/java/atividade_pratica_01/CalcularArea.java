@@ -1,7 +1,7 @@
 package atividade_pratica_01;
 
 import java.util.Scanner;
-import org.apache.commons.math3.*;
+import org.apache.commons.math3.util.FastMath;
 
 public class CalcularArea {
     public int calculoQuadrado(int base, int altura){
